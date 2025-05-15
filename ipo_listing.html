@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IPO Landing Page</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="assets/logo.png" alt="BLUESTOCK.in Logo" />
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#ipos">IPOs</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Discover the Latest IPOs</h1>
+    <p>Stay updated with current, upcoming, and closed IPOs.</p>
+    <button onclick="scrollToSection('ipos')">Explore Now</button>
+  </section>
+
+  <!-- IPO Listings -->
+  <section id="ipos" class="ipo-section">
+    <div class="filters">
+      <input type="text" id="searchInput" placeholder="Search company..." oninput="filterIPOs()" />
+      <select id="statusFilter" onchange="filterIPOs()">
+        <option value="All">All</option>
+        <option value="Upcoming">Upcoming</option>
+        <option value="Active">Active</option>
+        <option value="Closed">Closed</option>
+      </select>
+    </div>
+
+    <div id="ipoContainer" class="ipo-container"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <p>&copy; 2025 BLUESTOCK.in. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
